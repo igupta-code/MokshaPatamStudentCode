@@ -1,9 +1,13 @@
 Name: YOUR NAME HERE
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date   |    Time    |                                                                                                                                                                                                                                                                 Update |
+|:-------|:----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Sept 3 | 11-11:30pm |                                                                                                                                                                      I went through a couple games of S/L myself and thought about how I would solve them the fasterst |
+|        |            |                                                                                                                             You want the longest ladders possible w/o any snakes. So, first find the longest ladder in the board. What's the fastest way to get there? |
+|        |            |                                                                                                                                                                    Is there another ladder? If not, roll the greatest number you can(6) unless there is a snake there. |
+| Sept 3 | 11:30-12pm |                                                            I layed out some code using recurssion centered around finding the longest ladder. Base cases: if your finished -- return. Or, if there are no ladders, add the largest number you can w/o hitting a snake. | 
+|        |            | Then you recurse, passing in the starting position of the longest ladder as the end of the board. If the start = the end position but you haven't reached the end of the puzzle, then reset the start to be the end of the ladder and the end to the end of the board. |
+|        |            |                                                                                                                                                                                                                                                                        |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
