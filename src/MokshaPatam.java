@@ -7,7 +7,8 @@ import java.util.Queue;
  * for Adventures in Algorithms
  * at Menlo School in Atherton, CA
  *
- * Completed by: [YOUR NAME HERE]
+ * Completed by: Isha Gupta
+ * Sept 9, 2024
  *
  */
 
@@ -22,7 +23,7 @@ public class MokshaPatam {
         boolean[] visited = new boolean[boardsize + 1];
         int[] numSteps = new int[boardsize + 1];
 
-        // Initializes queue that represents all the intergers you will visit
+        // Initializes queue that represents all the integers you will visit
         Queue<Integer> toVisit = new LinkedList<Integer>();
         int currentPos = 1;
         toVisit.add(currentPos);
@@ -38,7 +39,7 @@ public class MokshaPatam {
         }
 
         while(!toVisit.isEmpty()){
-            // Resets the current location based on the queue
+            // Resets the current location based on the next value in the queue
             currentPos = toVisit.remove();
 
             // If the current node is the last role then return # of rolls
@@ -50,7 +51,7 @@ public class MokshaPatam {
             for(int i=1; i<7; i++){
                 node = currentPos + i;
 
-                // Prevents out of bounds error
+                // If prevents out of bounds error
                 if(node <= boardsize) {
                     // If it is a beginning of a snake/ladder, move to the end of the jump
                     if (jumps[node] != 0) {
@@ -58,12 +59,13 @@ public class MokshaPatam {
                     }
                     // If node hasn't been visited, add to queue and update node's info
                     if (!visited[node]) {
-                        // If you can get to this square with fewer steps, update numSteps
+                        // Update the number of steps it took to get to this node
                         numSteps[node] = numSteps[currentPos] + 1;
                         // Add the new node to the queue and mark as visited so you don't add it again
                         toVisit.add(node);
                         visited[node] = true;
                     }
+                    // In case of unwinnable board, return -1
                     if(toVisit.isEmpty()){
                         return -1;
                     }

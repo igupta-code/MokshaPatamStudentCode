@@ -13,6 +13,7 @@ Name: YOUR NAME HERE
 | Sept 7 |   1:30-2pm    |                                                                                                                                                                                             Wrote a first draft of code based on the pseudocode from the class slides. |
 | Sept 7 |   2-2:30pm    |                                                                        Realized I wasn't updating my numSteps array correctly. I was overcounting my steps, so I added a if statment that only modified the counter if the new number was less than the old #of steps. |
 | Sept 7 |   3:15-3:45   |                                                                           Some test cases weren't working, so I realized I needed to check for the unwinnable board. Looked into txt file to see why board was unwinable. Added an if to check if the queue was empty. |
+| Sept 9 |  10-10:30am   |                                        Talked with Mr. B and realized that I was visiting nodes multiple times. Fixed this by changing where I update hasVisited (node should marked as visited when its added to queue). Finalized work log/comments and sumbitted :) |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
